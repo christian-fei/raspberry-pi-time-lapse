@@ -5,7 +5,6 @@ Take a timelapse with a Raspberry Pi and Raspberry Pi Camera Module
 # Requirements
 
 - Raspberry Pi + Camera Module
-- (optional) Node.js and npm for HTTP server and image listings
 
 # Steps
 
