@@ -1,0 +1,3 @@
+#!/bin/bash
+
+sudo http-server /home/pi/snapshots -p 80

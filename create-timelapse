@@ -1,0 +1,9 @@
+#!/bin/bash
+
+DATE="$1"
+
+echo "Creating timelapse for snapshots matching $DATE"
+
+sleep 2
+
+cat snapshots/$DATE*.jpg | ffmpeg -r 10 -i - -vf format=yuv420p -vf scale=1280:-2 timelapse-$DATE.mp4

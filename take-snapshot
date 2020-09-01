@@ -1,0 +1,30 @@
+#!/bin/bash
+
+set -e
+
+DATE=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+SNAPSHOTS_DIR=/home/pi/snapshots
+SNAPSHOT_PATH="$SNAPSHOTS_DIR/$DATE.jpg"
+CURRENT_PATH="$SNAPSHOTS_DIR/current.jpg"
+
+echo "$DATE"
+mkdir -p "$SNAPSHOTS_DIR"
+echo "taking snapshot $SNAPSHOT_PATH"
+raspistill \
+	--width 1280 \
+	--height 960 \
+	--quality 100 \
+	--output "$SNAPSHOT_PATH"
+echo "snapshot saved $SNAPSHOT_PATH"
+
+echo "adding watermark $SNAPSHOT_PATH"
+cd $SNAPSHOTS_DIR
+montage \
+  -label "$DATE" \
+  $SNAPSHOT_PATH \
+  -pointsize 30 \
+  -gravity Center \
+  -geometry +0+0 \
+  $SNAPSHOT_PATH
+
+cp $SNAPSHOT_PATH $CURRENT_PATH
