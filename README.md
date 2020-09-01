@@ -2,7 +2,7 @@
 
 Take a timelapse with a Raspberry Pi and Raspberry Pi Camera Module
 
-Read the blog post on [cri.dev](https://cri.dev/posts/2020-09-01-Simple-Timelapse-with-a-Raspberry-Pi/#take-image-with-raspistill)
+Read the blog post on [cri.dev](https://cri.dev/posts/2020-09-01-Simple-Timelapse-with-a-Raspberry-Pi/)
 
 # Requirements
 
