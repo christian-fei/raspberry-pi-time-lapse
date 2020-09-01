@@ -8,7 +8,7 @@ Take a timelapse with a Raspberry Pi and Raspberry Pi Camera Module
 
 # Steps
 
-1. Clone this repo on your Raspberry 
+1. Clone this repo on your Raspberry (`git clone https://github.com/christian-fei/raspberry-pi-timelapse.git`)
 2. Enable Camera via `raspi-config` (in "Interfacing Options")
 3. Add contents of the file `crontab` to your cron schedule via `crontab -e`
 4. Generate a timelapse with e.g. `./create-timelapse 2020-09-01`
