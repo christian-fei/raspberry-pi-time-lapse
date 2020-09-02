@@ -3,13 +3,13 @@
 set -e
 
 DATE=$(date --date='yesterday' +"%Y-%m-%d")
-MAIN_DIR=/home/pi/raspberry-pi-timelapse
+MAIN_DIR=/home/pi/raspberry-pi-time-lapse
 SNAPSHOTS_DIR=$MAIN_DIR/snapshots
-TIMELAPSE_PATH="$MAIN_DIR/timelapse-$DATE.mp4"
+TIME_LAPSE_PATH="$MAIN_DIR/time-lapse-$DATE.mp4"
 
 echo "$DATE"
 mkdir -p "$SNAPSHOTS_DIR"
-echo "making timelapse of $DATE"
-cat $SNAPSHOTS_DIR/$DATE* | ffmpeg -f image2pipe -r 30 -vcodec mjpeg -i - -vcodec libx264 $TIMELAPSE_PATH
-cat $SNAPSHOTS_DIR/$DATE*.jpg | ffmpeg -r 10 -i - -vf scale=1280:-2  $TIMELAPSE_PATH
-echo "timelapse saved $TIMELAPSE_PATH"
+echo "making time-lapse of $DATE"
+cat $SNAPSHOTS_DIR/$DATE* | ffmpeg -f image2pipe -r 30 -vcodec mjpeg -i - -vcodec libx264 $TIME_LAPSE_PATH
+cat $SNAPSHOTS_DIR/$DATE*.jpg | ffmpeg -r 10 -i - -vf scale=1280:-2  $TIME_LAPSE_PATH
+echo "time-lapse saved $TIME_LAPSE_PATH"

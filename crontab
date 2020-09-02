@@ -1,4 +1,4 @@
 SHELL=/bin/bash
-*/5 * * * * sh /home/pi/raspberry-pi-timelapse/take-snapshot >> /home/pi/raspberry-pi-timelapse/snapshots.log 2>&1
-@reboot /home/pi/raspberry-pi-timelapse/server >> /home/pi/raspberry-pi-timelapse/server.log 2>&1
-0 0 * * * /home/pi/raspberry-pi-timelapse/create-yesterday-timelapse >> /home/pi/raspberry-pi-timelapse/timelapse.log 2>&1
+*/5 * * * * sh /home/pi/raspberry-pi-time-lapse/take-snapshot >> /home/pi/raspberry-pi-time-lapse/snapshots.log 2>&1
+@reboot /home/pi/raspberry-pi-time-lapse/server >> /home/pi/raspberry-pi-time-lapse/server.log 2>&1
+0 0 * * * /home/pi/raspberry-pi-time-lapse/create-yesterday-time-lapse >> /home/pi/raspberry-pi-time-lapse/time-lapse.log 2>&1

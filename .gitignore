@@ -1,6 +1,7 @@
 config.sh
 snapshots/
 timelapse*
+time-lapse*
 server.log
-timelapse.log
+time-lapse.log
 snapshots.log
