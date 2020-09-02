@@ -3,7 +3,7 @@
 set -e
 
 DATE="$1"
-MAIN_DIR=(pwd)
+MAIN_DIR="$(pwd)"
 SNAPSHOTS_DIR=$MAIN_DIR/snapshots
 TIMELAPSE_PATH="$MAIN_DIR/timelapse-$DATE.mp4"
 
