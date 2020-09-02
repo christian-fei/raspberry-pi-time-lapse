@@ -12,4 +12,4 @@ echo "Creating timelapse for snapshots matching $DATE"
 sleep 2
 rm $TIMELAPSE_PATH
 
-cat $SNAPSHOTS_DIR/$DATE*.jpg | ffmpeg -r 10 -i - -vf format=yuv420p -vf scale=1280:-2 $TIMELAPSE_PATH
+cat $SNAPSHOTS_DIR/$DATE*.jpg | ffmpeg -r 10 -i - -c:v libx264 -vf "format=yuv420p,scale=1280:-2" $TIMELAPSE_PATH
