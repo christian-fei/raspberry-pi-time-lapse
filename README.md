@@ -7,6 +7,7 @@ Read the blog post on [cri.dev](https://cri.dev/posts/2020-09-01-Simple-Time-lap
 # Requirements
 
 - Raspberry Pi + Camera Module
+- imagemagick (`sudo apt-get install imagemagick`)
 
 # Steps
 
