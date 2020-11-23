@@ -5,7 +5,8 @@ set -e
 DATE=$(date --date='yesterday' +"%Y-%m-%d")
 MAIN_DIR=/home/pi/raspberry-pi-time-lapse
 SNAPSHOTS_DIR=$MAIN_DIR/snapshots
-TIME_LAPSE_PATH="$MAIN_DIR/time-lapse-$DATE.mp4"
+TIMELAPSES_DIR=$MAIN_DIR/timelapses
+TIME_LAPSE_PATH="$TIMELAPSES_DIR/time-lapse-$DATE.mp4"
 
 echo "$DATE"
 mkdir -p "$SNAPSHOTS_DIR"

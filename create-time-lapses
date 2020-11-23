@@ -5,11 +5,12 @@ set -e
 DATE=$(date -u +"%Y-%m-%d")
 MAIN_DIR="$(pwd)"
 SNAPSHOTS_DIR=$MAIN_DIR/snapshots
+TIMELAPSES_DIR=$MAIN_DIR/timelapses
 
 function create () {
   DATE=$1
   FPS=$2
-  TIME_LAPSE_PATH="$MAIN_DIR/time-lapse-$DATE-$FPS-fps.mp4"
+  TIME_LAPSE_PATH="$TIMELAPSES_DIR/time-lapse-$DATE-$FPS-fps.mp4"
   echo "Creating time-lapse for snapshots matching $DATE in $FPS fps"
 
   rm -f $TIME_LAPSE_PATH

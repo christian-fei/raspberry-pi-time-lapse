@@ -7,10 +7,11 @@ DATE=${1:-$TODAY_DATE}
 MAIN_DIR="$(pwd)"
 FPS=${2:-16}
 SNAPSHOTS_DIR=$MAIN_DIR/snapshots
-TIME_LAPSE_PATH="$MAIN_DIR/time-lapse-$DATE-$FPS-fps.mp4"
+TIMELAPSES_DIR=$MAIN_DIR/timelapses
+TIME_LAPSE_PATH="$TIMELAPSES_DIR/time-lapse-$DATE-$FPS-fps.mp4"
 
 echo "Creating time-lapse for snapshots matching $DATE in $FPS fps"
-
+mkdir -p $TIMELAPSES_DIR
 sleep 2
 rm -f $TIME_LAPSE_PATH
 
