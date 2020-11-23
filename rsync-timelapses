@@ -1,0 +1,4 @@
+#!/bin/bash
+
+source config.sh
+rsync -av --progress -r  "$PI_USER@$PI_HOST:/home/pi/raspberry-pi-time-lapse/timelapses" .
