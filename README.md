@@ -22,3 +22,37 @@ Optionally, to speed up time-lapse creation on your PC
 6. `cp config.example.sh config.sh` and set up PI_USER and PI_HOST 
 7. Sync snapshots with `./rsync-snapshots`
 8. Generate a time-lapse with e.g. `./create-time-lapse 2020-09-01`
+
+
+# other scripts
+
+### `rsync` snapshots
+
+syncs `snapshots/` with the snapshots taken on the raspberry pi
+
+```sh
+./rsync-snapshots
+```
+
+### create time-lapse of all snapshots
+
+```sh
+./create-time-lapse-all
+```
+
+pass custom FPS (default `30`)
+
+```sh
+./create-time-lapse-all 60
+```
+### `rsync` snapshots from the Raspberry Pi to your PC
+
+```sh
+./rsync-snapshots
+```
+### `rsync` time-lapses from the Raspberry Pi to your PC
+
+```sh
+./rsync-time-lapses
+```
+
