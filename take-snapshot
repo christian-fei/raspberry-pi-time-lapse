@@ -11,8 +11,8 @@ echo "$DATE"
 mkdir -p "$SNAPSHOTS_DIR"
 echo "taking snapshot $SNAPSHOT_PATH"
 raspistill \
-	--width 1280 \
-	--height 960 \
+	--width 2560 \
+	--height 1920 \
 	--quality 100 \
 	--output "$SNAPSHOT_PATH"
 echo "snapshot saved $SNAPSHOT_PATH"

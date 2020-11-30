@@ -12,5 +12,5 @@ echo "$DATE"
 mkdir -p "$SNAPSHOTS_DIR"
 echo "making time-lapse of $DATE"
 cat $SNAPSHOTS_DIR/$DATE* | ffmpeg -f image2pipe -r 30 -vcodec mjpeg -i - -vcodec libx264 $TIME_LAPSE_PATH
-cat $SNAPSHOTS_DIR/$DATE*.jpg | ffmpeg -r 10 -i - -vf scale=1280:-2  $TIME_LAPSE_PATH
+cat $SNAPSHOTS_DIR/$DATE*.jpg | ffmpeg -r 10 -i - -vf scale=2560:-2  $TIME_LAPSE_PATH
 echo "time-lapse saved $TIME_LAPSE_PATH"
