@@ -1,0 +1,6 @@
+#!/bin/bash
+
+source config.sh
+SNAPSHOTS_DIR=/home/pi/raspberry-pi-time-lapse/snapshots
+
+mogrify -resize 1280x $SNAPSHOTS_DIR/*.jpg
